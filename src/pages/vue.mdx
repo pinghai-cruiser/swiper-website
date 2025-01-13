@@ -115,10 +115,14 @@ Here is the list of additional modules imports from `swiper/modules`:
 </template>
 <script>
   // import Swiper core and required modules
+  import SwiperCore from 'swiper/core';
   import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
 
   // Import Swiper Vue.js components
   import { Swiper, SwiperSlide } from 'swiper/vue';
+
+  // install required modules by SwiperCore.use()
+  SwiperCore.use([Navigation, Pagination, Scrollbar, A11y]);
 
   // Import Swiper styles
   import 'swiper/css';
